@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-jit-demo",
+  "version": "1.0.0",
+  "description": "Demo Tailwindcss site using the Jit plugin",
+  "main": "index.js",
+  "scripts": {
+    "watch": "postcss ./dist/assets/css/app.src.css -o ./dist/assets/css/app.min.css -w",
+    "compress:images": "imagemin dist/assets/img/* --out-dir=dist/assets/img",
+    "build": "live-server dist & npm run watch"
+  },
+  "keywords": [],
+  "author": "Robert Hallatt",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.17",
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^4.1.10",
+    "imagemin-cli": "^6.0.0",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
+  },
+  "dependencies": {}
+}
