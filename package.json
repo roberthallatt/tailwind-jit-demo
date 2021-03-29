@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "postcss ./dist/assets/css/app.src.css -o ./dist/assets/css/app.min.css -w",
     "compress:images": "imagemin dist/assets/img/* --out-dir=dist/assets/img",
-    "build": "live-server dist & npm run watch"
+    "build": "live-server --port=3000 dist & npm run watch"
   },
   "keywords": [],
   "author": "Robert Hallatt",
