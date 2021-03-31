@@ -1,16 +1,15 @@
-module.exports = {
+module.exports = (ctx) => ({
+  map: false,
+  parser: ctx.options.parser,
   plugins: {
     '@tailwindcss/jit': {},
     autoprefixer: {},
-    //
-    // uncomment this to enable cssnano
-    //
-    //cssnano: {
-    //  preset: ['default', {
-    //    discardComments: {
-    //        removeAll: true,
-    //    },
-    //  }],
-    //},
+    cssnano: ctx.env === 'production' ? {
+      preset: ['default', {
+        discardComments: {
+            removeAll: true,
+        },
+      }],
+    } : false,
   },
-}
+})
