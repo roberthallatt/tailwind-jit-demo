@@ -12,6 +12,6 @@ A simple Tailwind build script that employs the @tailwindcss/jit plugin to gener
 
 1. Development => npm run serve
 2. Production => npm run build
-3. Compress images (optional if you have an img folder in the assets folder) => npm run compress:images
+3. Compress images (targets img folder in the assets folder) => npm run compress:images
 
 Happy coding!
