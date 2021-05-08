@@ -2,7 +2,7 @@ module.exports = (ctx) => ({
   map: false,
   parser: ctx.options.parser,
   plugins: {
-    '@tailwindcss/jit': {},
+    tailwindcss: {},
     autoprefixer: {},
     cssnano: ctx.env === 'production' ? {
       preset: ['default', {
@@ -11,5 +11,5 @@ module.exports = (ctx) => ({
         },
       }],
     } : false,
-  },
+  }
 })
