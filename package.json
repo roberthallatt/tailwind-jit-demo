@@ -21,8 +21,7 @@
       "patterns": [
         "src/assets"
       ],
-      "extensions": "jpg,jpeg,png,gif,css",
-      "ignore": "src/assets/css/tailwind.css",
+      "extensions": "jpg,jpeg,png,gif,css,js",
       "quiet": false
     }
   },
