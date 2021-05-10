@@ -7,7 +7,7 @@ module.exports = (ctx) => ({
     cssnano: ctx.env === 'production' ? {
       preset: ['default', {
         discardComments: {
-            removeAll: true,
+          removeAll: true,
         },
       }],
     } : false,

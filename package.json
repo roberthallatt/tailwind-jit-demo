@@ -2,6 +2,7 @@
   "name": "tailwind-jit-demo",
   "version": "1.0.0",
   "description": "Tailwindcss starter project",
+  "homepage": "https://github.com/roberthallatt/tailwind-starter/blob/main/README.md",
   "watch": {
     "panini": {
       "patterns": [
@@ -17,7 +18,7 @@
       "delay": 1500,
       "runOnChangeOnly": false
     },
-    "watch:assets": {
+    "sync:assets": {
       "patterns": [
         "src/assets"
       ],
@@ -26,21 +27,23 @@
     }
   },
   "scripts": {
-    "prod:css": "postcss ./tailwind.css -o ./dist/assets/css/tailwind.css",
-    "dev:css": "postcss ./tailwind.css -o ./dist/assets/css/tailwind.css -w",
+    "prod:css": "TAILWIND_MODE=build NODE_ENV=production postcss ./tailwind.css -o ./dist/assets/css/tailwind.css",
+    "dev:css": "TAILWIND_MODE=watch NODE_ENV=development postcss ./tailwind.css -o ./dist/assets/css/tailwind.css -w",
     "panini": "panini --root=./src/pages --layouts=./src/layouts --partials=./src/partials --helpers=./src/helpers --data=./src/data --output=./dist './src/pages/**/*.html'",
     "compress:images": "imagemin dist/assets/img/* --out-dir=dist/assets/img",
-    "watch:assets": "syncdir ./src/assets ./dist/assets -w",
+    "sync:assets": "syncdir ./src/assets ./dist/assets -w",
     "tailwind-config-viewer": "tailwind-config-viewer -o",
-    "serve": "browser-sync dist -w & npm run dev:css & npm run tailwind-config-viewer & npm run watch",
-    "build": "npm run panini & npm run prod:tailwind:css & compress:images",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "start": "browser-sync dist -w & npm run dev:css & npm run tailwind-config-viewer & npm run watch",
+    "build": "npm run compress:images & npm run prod:css"
   },
-  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/roberthallatt/tailwind-starter/issues",
+    "email": "roberth@cps.ca"
+  },
   "author": "Robert Hallatt",
   "license": "ISC",
   "devDependencies": {
-    "@tailwindcss/jit": "^0.1.17",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "copyfiles": "^2.4.1",
