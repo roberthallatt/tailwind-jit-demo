@@ -13,7 +13,7 @@ A simple Tailwind build tool that includes the following packages:
 Here's what yo need to do to get up and running in just minutes.
 
 1. git clone [https://github.com/roberthallatt/tailwind-starter](https://github.com/roberthallatt/tailwind-starter)
-2. cd tailwind-starter-build-package-main
+2. cd tailwind-starter
 3. npm install
 
 ## Usage
