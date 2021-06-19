@@ -1,6 +1,6 @@
 {
-  "name": "tailwind-jit-demo",
-  "version": "1.0.0",
+  "name": "tailwind-starter",
+  "version": "2.0.0",
   "description": "Tailwindcss starter project",
   "homepage": "https://github.com/roberthallatt/tailwind-starter/blob/main/README.md",
   "watch": {
@@ -27,8 +27,8 @@
     }
   },
   "scripts": {
-    "prod:css": "TAILWIND_MODE=build NODE_ENV=production postcss ./tailwind.css -o ./dist/assets/css/tailwind.css",
-    "dev:css": "TAILWIND_MODE=watch NODE_ENV=development postcss ./tailwind.css -o ./dist/assets/css/tailwind.css -w",
+    "prod:css": "npx tailwindcss -i ./tailwind.css -o ./dist/assets/css/tailwind.css --jit --purge='./src/**/*.html' --minify",
+    "dev:css": "npx tailwindcss -i ./tailwind.css -o ./dist/assets/css/tailwind.css --jit  --purge='./src/**/*.html' --watch",
     "panini": "panini --root=./src/pages --layouts=./src/layouts --partials=./src/partials --helpers=./src/helpers --data=./src/data --output=./dist './src/pages/**/*.html'",
     "compress:images": "imagemin dist/assets/img/* --out-dir=dist/assets/img",
     "sync:assets": "syncdir ./src/assets ./dist/assets -w",
@@ -55,7 +55,7 @@
     "postcss-cli": "^8.3.1",
     "sync-directory": "^2.2.17",
     "tailwind-config-viewer": "^1.5.1",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.2.2"
   },
   "dependencies": {}
 }
