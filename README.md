@@ -1,6 +1,6 @@
 # Tailwind CSS build tool
 
-A simple Tailwind build tool that includes the following packages:
+A simple Tailwind CSS build tool that includes the following packages:
 
 * panini, a flat file compiler. Create pages with consistent layouts and reusable partials with ease. - [https://github.com/foundation/panini](https://github.com/foundation/panini)
 * imagemin - [https://github.com/imagemin/imagemin](https://github.com/imagemin/imagemin)
