@@ -2,7 +2,7 @@
 
 A simple Tailwind build tool that includes the following packages:
 
-* panini, a simple flat file generator - [https://github.com/foundation/panini](https://github.com/foundation/panini)
+* panini, a flat file compiler. Create pages with consistent layouts and reusable partials with ease. - [https://github.com/foundation/panini](https://github.com/foundation/panini)
 * imagemin - [https://github.com/imagemin/imagemin](https://github.com/imagemin/imagemin)
 * sync-directory - [https://www.npmjs.com/package/sync-directory](https://www.npmjs.com/package/sync-directory)
 * tailwindcss (Jit mode ebnabled by default) - [https://tailwindcss.com/](https://tailwindcss.com/)
@@ -10,7 +10,7 @@ A simple Tailwind build tool that includes the following packages:
 
 ## Installation Steps
 
-Here's what yo need to do to get up and running in just minutes.
+Here's what yo need to do to get up and running.
 
 1. git clone [https://github.com/roberthallatt/tailwind-starter](https://github.com/roberthallatt/tailwind-starter)
 2. cd tailwind-starter
