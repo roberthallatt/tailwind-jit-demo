@@ -1,3 +1,3 @@
 # Tailwind Starter
 
-Git clone and npm install and you're away to the races.
+Git clone --> npm install --> npm start --> start building.
