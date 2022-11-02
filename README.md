@@ -2,7 +2,7 @@
 
 This starter does not rely on Gulp, Grunt or or any other kind of task runner. It uses NPM CLI commands.
 
-Note: Some packages may not install properly when using the latest version of node js.
+Note: imagemin-cli throws errors with the latest version of node.js. It works fine with version 16.
 
 The following NPM packages are used:
 
@@ -10,7 +10,7 @@ The following NPM packages are used:
 - tailwind-config-viewer
 - panini (handy flat file compiler)
 - concat
-- @squoosh/cli (image minification)
+- imagemin-cli (image minification)
 - uglify-js (JS minification)
 - browser-sync (local server)
 - npm-run-all
