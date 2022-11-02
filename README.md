@@ -2,6 +2,8 @@
 
 This starter does not rely on Gulp, Grunt or or any other kind of task runner. It uses NPM CLI commands.
 
+Note: Some packages may not install properly when using the latest version of node js.
+
 The following NPM packages are used:
 
 - tailwindcss
