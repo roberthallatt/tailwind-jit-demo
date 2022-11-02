@@ -4,35 +4,25 @@
   "description": "Tailwindcss starter project",
   "homepage": "https://github.com/roberthallatt/tailwind-starter/blob/main/README.md",
   "scripts": {
-
     "tailwind:prod": "tailwindcss -i ./tailwind.css -o ./dist/assets/css/tailwind.css --minify",
     "tailwind:dev": "tailwindcss -i ./tailwind.css -o ./dist/assets/css/tailwind.css --watch",
-    
     "panini": "panini --root=./src/pages --layouts=./src/layouts --partials=./src/partials --helpers=./src/helpers --data=./src/data --output=./dist './src/pages/**/*.html'",
-    
     "concat:js": "mkdir -p ./dist/assets/js && concat -o ./dist/assets/js/scripts.js ./src/assets/js/wow.js",
-
     "tailwind-config-viewer": "tailwind-config-viewer -o",
-
     "uglify": "uglifyjs -o ./dist/assets/js/scripts.min.js ./dist/assets/js/scripts.js",
-
     "squoosh": "squoosh-cli --mozjpeg '{quality:90}' ./src/assets/img -d ./dist/assets/img",
-    
     "build:css": "npm run tailwind:prod",
     "build:js": "npm run concat:js && npm run uglify",
     "build:img": "npm run squoosh",
     "build:panini": "npm run panini",
-    
     "watch:panini": "onchange './src/**/*.html' './src/**/*.yml' -- npm run panini",
     "watch:css": "npm run tailwind:dev",
     "watch:js": "onchange './src/assets/js/*.js' -- npm run build:js",
     "watch:img": "onchange './src/assets/img/*' -- npm run build:img",
     "watch": "npm-run-all --parallel watch:*",
-
     "start": "browser-sync dist -w & npm run watch",
     "twconfig": "npm run tailwind-config-viewer",
     "build": "npm run build:css && npm run build:js && npm run build:img"
-
   },
   "bugs": {
     "url": "https://github.com/roberthallatt/tailwind-starter/issues",
@@ -44,14 +34,10 @@
     "@squoosh/cli": "^0.7.2",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
-    "clean-css-cli": "^5.6.1",
     "concat": "^1.0.3",
-    "copyfiles": "^2.4.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "panini": "^1.7.1",
-    "postcss-cli": "^8.3.1",
-    "sync-directory": "^2.2.17",
     "tailwind-config-viewer": "^1.7.2",
     "tailwindcss": "^3.2.1",
     "uglify-js": "^3.17.4"
