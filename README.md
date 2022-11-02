@@ -17,5 +17,5 @@ The following NPM packages are used:
 Commands to build out your site
 
 - npm start (starts a server and watches for changes)
-- npm run build (use when yiu are ready to deploy your site to a production server)
+- npm run build (use when you are ready to deploy your site to a production server)
 - npm run twconfig (a nice GUI to view your tailwind CSS styles) 
